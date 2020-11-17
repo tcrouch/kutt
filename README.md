@@ -82,7 +82,9 @@ The `docker-compose.yml` uses the official kutt docker image available on [Docke
 For the minimal configuration the following settings have to be changed in the `.env`-file:
 
 - **DEFAULT_DOMAIN**: The domain of your kutt instance
-- **DB_**: The DB credentials (when you use docker-compose you can skip these)
+- One of:
+  - **DB_**: The DB credentials (when you use docker-compose you can skip these)
+  - **DATABASE_URL**: A database connection string
 - **ADMIN_EMAILS**: A comma-separated list of the administrator-accounts
 - **RECAPTCHA_**: Enter your credentials to use reCaptchas or delete this setting if you don't want to use it
 - **MAIL_**: Enter the SMTP-server's credentials (The experience shows SSL works better than STARTTLS; The mail config is required to easily create accounts, see [this comment](https://github.com/thedevs-network/kutt/issues/269#issuecomment-628604256) how it can be done manually)
